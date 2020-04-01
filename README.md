@@ -8,4 +8,7 @@ To run:
 python parse.py
 ```
 
-!!! The script is for private usage only!
+In case you use conda, you can create environment with all dependencies:
+```
+conda env create -f ./environment.yml
+```
