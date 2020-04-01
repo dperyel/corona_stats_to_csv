@@ -1,0 +1,7 @@
+name: coronaenv
+dependencies:
+  - pandas
+  - numpy
+  - lxml
+  - requests
+  
