@@ -1,10 +1,12 @@
+""" Saving a statistics about COVID-19 from the worldometers """
+
+from datetime import date, timedelta
+import os
 import requests
 import pandas as pd
-import os
-import os.path
-from datetime import date, timedelta
 
 def main():
+    """ Main """
     if not os.path.exists("./stats"):
         os.mkdir("./stats")
 
@@ -40,10 +42,12 @@ def main():
         date_frame_yesterday.to_csv(path_with_date_yesterday, encoding="utf-8", index=False)
         print('\t' + path_with_date_yesterday)
 
-def to_path(name):
-    return f'./stats/{name}.csv'
+def to_path(name, path='./stats'):
+    """ Makes a relative path to a csv """
+    return f'{path}/{name}.csv'
 
 def remove_if_exists(path):
+    """ Checks if file already exists and removes it """
     if os.path.exists(path):
         os.remove(path)
 
